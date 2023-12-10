@@ -1,0 +1,82 @@
+{
+  "banner": {
+    "image": "/images/teams/background.image.png",
+    "alt": "meet-our-team"
+  },
+  "breadcrumb": [
+    {
+      "id": "about-us",
+      "name": "About Us",
+      "link": "/",
+      "disabled": false
+    },
+    {
+      "id": "Meet Our Team",
+      "name": "Meet Our Team",
+      "link": "",
+      "disabled": true
+    }
+  ],
+  "team": {
+    "history": {
+      "headline": "Company History",
+      "description": "DriveEase was founded in 2016 with a bold vision to revolutionize the car rental industry. From its inception, DriveEase has been a trailblazer, introducing a revolutionary approach to redefine the travel experience. Throughout its journey, DriveEase has continuously innovated and embraced a customer-centric mindset. Today, it stands as a symbol of excellence in the car rental sector, driven by a commitment to inclusivity, creativity, and exceptional service. The milestones in DriveEase's history mark a trajectory of growth, innovation, and a steadfast dedication to delivering outstanding travel solutions."
+    },
+    "culture": {
+      "headline": "Company Culture",
+      "description": "At DriveEase, our culture is the driving force behind our success, fostering a dynamic and inclusive environment that inspires innovation and collaboration. Rooted in our values, we believe in:",
+      "aspects": [
+        {
+          "id": "wrinkle_assesment",
+          "name": "Innovation",
+          "description": "We encourage fresh ideas and a forward-thinking mindset, pushing the boundaries of what's possible in the car rental industry."
+        },
+        {
+          "id": "acne_analysis",
+          "name": "Inclusivity",
+          "description": "Our diverse team brings together unique perspectives, creating a rich tapestry of experiences that contributes to our vibrant workplace."
+        },
+        {
+          "id": "pigmentation_profiling",
+          "name": "Customer-Centricity",
+          "description": "We are dedicated to providing unparalleled customer experiences, putting the needs of our users at the forefront of everything we do."
+        }
+      ],
+      "description_2": "Joining DriveEase means becoming part of a culture that values passion, creativity, and a commitment to redefining the future of travel. Together, we navigate uncharted roads and shape the next era of personalized travel experiences."
+    },
+    "teams": {
+      "headline": "Our Teams"
+    },
+
+    "founders": [
+      {
+        "id": "0",
+        "name": "Cillian East",
+        "role": "Founder and CEO",
+        "photo": "/images/teams/founder/yusong.png",
+        "description": "A visionary leader with over 20 years of experience in the travel industry, John founded DriveEase with the mission of transforming car rentals."
+      },
+      {
+        "id": "0",
+        "name": "Edward Johnson",
+        "role": "Chief Technology Officer",
+        "photo": "/images/teams/founder/victor.png",
+        "description": "With a background in cutting-edge technologies, Edward leads DriveEase's technological innovations, ensuring a seamless and advanced platform for our users."
+      },
+      {
+        "id": "0",
+        "name": "Matthias Herald",
+        "role": "Customer Experience Manager",
+        "photo": "/images/teams/founder/victor.png",
+        "description": "Matthias brings a wealth of experience in customer service, ensuring that every interaction with DriveEase exceeds expectations."
+      },
+      {
+        "id": "0",
+        "name": "Michael Chen",
+        "role": "Head of Operations",
+        "photo": "/images/teams/founder/victor.png",
+        "description": "Michael oversees the operational excellence of DriveEase, leveraging years of experience to optimize processes and enhance the overall customer journey."
+      }
+    ]
+  }
+}

@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import clsx from "clsx";
 import { useHomeDictionaries } from "../../zustand/dictionaries/store";
 import ProductValueCardHome from "../../components/product_value_card/ProductValueCard.home";
-import ProductCardHome from "../../components/product_card/ProductCard.home";
+// import ProductCardHome from "../../components/product_card/ProductCard.home";
 import Section from "@/core/ui/components/section/Section.component";
 import ContentSection from "@/core/ui/components/content_section/ContentSection.component";
 

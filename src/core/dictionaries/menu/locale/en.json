@@ -19,24 +19,6 @@
         "name": "Products",
         "link": "#products",
         "type": "anchor"
-      },
-      {
-        "id": "our_partners",
-        "name": "Our Partners",
-        "link": "#partners",
-        "type": "anchor"
-      },
-      {
-        "id": "contact_us",
-        "name": "Contact Us",
-        "link": "#contact-us",
-        "type": "anchor"
-      },
-      {
-        "id": "support",
-        "name": "Support",
-        "link": "/download",
-        "type": "link"
       }
     ]
   }
