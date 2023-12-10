@@ -30,27 +30,27 @@
     }
   },
   "product": {
-    "pre": "Products",
-    "headline": "Experience the next generation of personalized wellness, optimized for you",
-    "subline": "Introducing TrichoTrack™ and MagicMirror™ - our revolutionary suite of products designed to reshape the landscape of personal care. Powered by cutting-edge AI and cloud technologies, these innovative applications provide precise and comprehensive assessment, as well as constant supervision of your scalp and facial skin health. Beyond that, they also deliver customized management strategies tailored to your unique needs. With TrichoTrack™ and MagicMirror™, personal care becomes an intelligent, proactive, and informed experience.",
+    "pre": "Services",
+    "headline": "Discover DriveEase's innovative car rental solutions and step into the future of personalized travel experiences.",
+    "subline": "Explore DriveEase's versatile fleet, featuring a curated selection of minivans, sport cars, and SUVs. Whether you crave the spacious comfort of a minivan, the exhilarating performance of a sports car, or the rugged capability of an SUV, DriveEase has the perfect vehicle to suit your style. Experience the road like never before with our premium and diverse range of transportation options.",
     "values": [
       {
-        "id": "Understandable AI",
-        "image": "/images/home/aspect/understandable_ai.image.png",
-        "name": "Understandable AI",
-        "description": "Unlike other 'black-box' solutions, our AI models not only make accurate diagnoses but also can explain their reasoning in a way that you can understand, ensuring the decision-making process is reasonable, justifiable, and reliable."
-      },
-      {
-        "id": "Human-centred Design",
-        "image": "/images/home/aspect/human_centered_design.image.png",
-        "name": "Human-centred Design",
-        "description": "By considering the distinct characteristics of every user, including age, gender, and ethnicity, throughout the design process, our products not only cater to your specific interaction preferences but also mitigate the impact of diagnostic bias."
-      },
-      {
-        "id": "Ubiquitous Access",
+        "id": "SUVs",
         "image": "/images/home/aspect/ubiquitous_access.image.png",
-        "name": "Ubiquitous Access",
-        "description": "Leveraging cloud technologies, our solutions offer hassle-free integration into your existing systems. Unlock the industry-leading AI capabilities with a simple Internet connection and enjoy seamless access to the finest AI services anytime, anywhere."
+        "name": "SUVs",
+        "description": "Experience the epitome of comfort and versatility with our SUVs. Spacious interiors, cutting-edge safety features, and a smooth ride make these vehicles perfect for family trips or adventurous getaways. Pricing varies based on the model and duration, ensuring flexible options to suit your travel plans."
+      },
+      {
+        "id": "Minivans",
+        "image": "/images/home/aspect/understandable_ai.image.png",
+        "name": "Minivans",
+        "description": "Tailored for group travel, our minivans offer ample space and convenience. Loaded with family-friendly features, these vehicles provide a seamless travel experience. Pricing is competitive, with discounts for extended rentals."
+      },
+      {
+        "id": "Sport Cars",
+        "image": "/images/home/aspect/human_centered_design.image.png",
+        "name": "Sport Cars",
+        "description": "For those seeking excitement on the road, our sports cars deliver unparalleled performance and style. Pricing varies based on the model and rental duration, providing options for short bursts of adrenaline or longer adventures."
       }
     ],
     "products": [
