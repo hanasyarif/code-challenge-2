@@ -1,0 +1,73 @@
+"use client";
+import { useEffect } from "react";
+import clsx from "clsx";
+import Navbar from "../../components/navbar/Navbar.component";
+import { useLocaleStore } from "@/core/zustand/locale/store";
+import Footer from "../../components/footer/Footer.component";
+import { getCompanyDictionaries } from "@/core/dictionaries/company";
+import { getContactDictionaries } from "@/core/dictionaries/contact";
+import { getMenuDictionaries } from "@/core/dictionaries/menu";
+import { useNavigationStore } from "@/core/zustand/navigation/store";
+import { useRouter } from "next/navigation";
+
+export interface PublicLayoutProps {
+  children?: React.ReactNode;
+}
+
+export default function PublicLayout({ children }: PublicLayoutProps) {
+  const locale = useLocaleStore().locale;
+  const menu = getMenuDictionaries(locale).alvisual;
+  const company = getCompanyDictionaries(locale).alvisual;
+  const contact = getContactDictionaries(locale).alvisual;
+  const navigationStore = useNavigationStore();
+  const router = useRouter();
+
+  const defaultLink = "/";
+
+  const handleClickNavbar = (value: string) => {
+    if (value.includes("/")) {
+      router.push(value);
+      return;
+    }
+    navigationStore.setIDNavigation(value as any);
+    localStorage.setItem("navigation_id", value);
+    router.push(defaultLink);
+  };
+  const handleClickFooter = (value: string) => {
+    navigationStore.setIDNavigation(value as any);
+    localStorage.setItem("navigation_id", value);
+    router.push(defaultLink);
+  };
+
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      const navigationID = localStorage.getItem("navigation_id");
+      if (navigationID !== null) {
+        navigationStore.setIDNavigation(navigationID as any);
+      }
+    }
+  }, []);
+
+  return (
+    <main className={clsx("w-full")}>
+      <Navbar
+        defaultLink={defaultLink}
+        activeTargetID={navigationStore.id}
+        list={menu.list}
+        onClick={handleClickNavbar}
+      />
+      {children}
+      <Footer
+        company={company}
+        link={{
+          ...menu,
+          activeTargetID: navigationStore.id,
+          defaultLink: defaultLink,
+          onClick: handleClickFooter,
+        }}
+        contact={contact}
+        credits={company.credits}
+      />
+    </main>
+  );
+}
