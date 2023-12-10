@@ -6,7 +6,6 @@ import Breadcrumb from "@/core/ui/components/breadcrumb/Breadcrumb.component";
 import { useTeamsDictionaries } from "../../zustand/dictionaries/store";
 import PersonnelCardTeams from "../../components/personnel_card/PersonnelCard.teams";
 
-
 export default function ContentTeams() {
   const dict = useTeamsDictionaries.getState().dict;
   return (
@@ -22,6 +21,7 @@ export default function ContentTeams() {
           >
             <Breadcrumb list={dict.breadcrumb} />
 
+            {/* history */}
             <div
               className={clsx(
                 "grid grid-cols-1 place-content-start place-items-start gap-y-[1.25rem]",
@@ -33,15 +33,89 @@ export default function ContentTeams() {
                   "text-[2.5rem] md:text-[3rem] leading-[3.375rem] md:leading-[4rem] text-eerie-black font-semibold"
                 )}
               >
-                {dict.team.headline}
+                {dict.team.history.headline}
               </h2>
               <h3
                 className={clsx(
-                  "text-[1rem] md:text-[1.125rem] leading-[1.5rem] md:leading-[2rem] text-primary font-light"
+                  "text-[1rem] md:text-[1.125rem] leading-[1.5rem] md:leading-[2rem] text-granite-gray font-light"
                 )}
               >
-                {dict.team.subline}
+                {dict.team.history.description}
               </h3>
+            </div>
+
+            {/* culture */}
+            <div
+              className={clsx(
+                "grid grid-cols-1 place-content-start place-items-start gap-y-[1.25rem]",
+                "w-full"
+              )}
+            >
+              <h2
+                className={clsx(
+                  "text-[2.5rem] md:text-[3rem] leading-[3.375rem] md:leading-[4rem] text-eerie-black font-semibold"
+                )}
+              >
+                {dict.team.culture.headline}
+              </h2>
+              <h3
+                className={clsx(
+                  "text-[1rem] md:text-[1.125rem] leading-[1.5rem] md:leading-[2rem] text-granite-gray font-light"
+                )}
+              >
+                {dict.team.culture.description}
+              </h3>
+
+              <ul className={clsx("list-disc", "pl-[3rem]")}>
+                {dict.team.culture.aspects.map((aspect, aspectIndex) => (
+                  <li
+                    key={aspectIndex}
+                    className={clsx(
+                      "text-[1.125rem] leading-[2rem] font-light text-granite-gray"
+                    )}
+                  >
+                    <span
+                      className={clsx(
+                        "text-[1.125rem] leading-[2rem] font-semibold text-primary"
+                      )}
+                    >
+                      {aspect.name}
+                    </span>
+                    {": "}
+                    <span
+                      className={clsx(
+                        "text-[1.125rem] leading-[2rem] font-light text-granite-gray"
+                      )}
+                    >
+                      {aspect.description}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <h3
+                className={clsx(
+                  "text-[1rem] md:text-[1.125rem] leading-[1.5rem] md:leading-[2rem] text-granite-gray font-light"
+                )}
+              >
+                {dict.team.culture.description_2}
+              </h3>
+            </div>
+
+            {/* teams */}
+            <div
+              className={clsx(
+                "grid grid-cols-1 place-content-start place-items-start gap-y-[1.25rem]",
+                "w-full"
+              )}
+            >
+              <h2
+                className={clsx(
+                  "text-[2.5rem] md:text-[3rem] leading-[3.375rem] md:leading-[4rem] text-eerie-black font-semibold"
+                )}
+              >
+                {dict.team.teams.headline}
+              </h2>
             </div>
 
             <div
@@ -68,28 +142,6 @@ export default function ContentTeams() {
                         ? "narrow"
                         : "wide"
                     }
-                  />
-                ))}
-              </div>
-
-              <hr
-                className={clsx("w-full", "border-t border-t-light-silver")}
-              />
-
-              <div
-                className={clsx(
-                  "grid grid-cols-1 lg:grid-cols-3 place-content-start place-items-start gap-y-[1.5rem] gap-x-[1.5rem]",
-                  "w-full"
-                )}
-              >
-                {dict.team.employees.map((employee) => (
-                  <PersonnelCardTeams
-                    key={employee.id}
-                    name={employee.name}
-                    role={employee.role}
-                    photo={employee.photo}
-                    description={employee.description}
-                    variant={"narrow"}
                   />
                 ))}
               </div>

@@ -18,46 +18,64 @@
     }
   ],
   "team": {
-    "headline": "Meet Our Team",
-    "subline": "We are a dynamic team, united by passion and supported by expertise, relentlessly challenging the boundaries of the impossible.",
-    "description": "The founder and CEO of Alvisual Pte Ltd, Dr. Leng Yusong, holds a PhD in Artificial Intelligence and Computer Vision, conferred upon him by the National University of Singapore in 2020. Beyond his academic knowledge, Dr. Yusong is a practised entrepreneur as well, having successfully co-founded HiCura Medical Pte Ltd amidst his doctoral pursuits. Serving as the former CTO of HiCura Medical, Dr. Yusong was instrumental in the development of uSINE®, a pioneering AI software that stands as the world's premier solution capable of automatically identifying spinal anatomical landmarks from ultrasound scans in real time. At Alvisual, he continues to advance, riding the crest of innovation.",
+    "history": {
+      "headline": "Company History",
+      "description": "DriveEase was founded in 2016 with a bold vision to revolutionize the car rental industry. From its inception, DriveEase has been a trailblazer, introducing a revolutionary approach to redefine the travel experience. Throughout its journey, DriveEase has continuously innovated and embraced a customer-centric mindset. Today, it stands as a symbol of excellence in the car rental sector, driven by a commitment to inclusivity, creativity, and exceptional service. The milestones in DriveEase's history mark a trajectory of growth, innovation, and a steadfast dedication to delivering outstanding travel solutions."
+    },
+    "culture": {
+      "headline": "Company Culture",
+      "description": "At DriveEase, our culture is the driving force behind our success, fostering a dynamic and inclusive environment that inspires innovation and collaboration. Rooted in our values, we believe in:",
+      "aspects": [
+        {
+          "id": "wrinkle_assesment",
+          "name": "Innovation",
+          "description": "We encourage fresh ideas and a forward-thinking mindset, pushing the boundaries of what's possible in the car rental industry."
+        },
+        {
+          "id": "acne_analysis",
+          "name": "Inclusivity",
+          "description": "Our diverse team brings together unique perspectives, creating a rich tapestry of experiences that contributes to our vibrant workplace."
+        },
+        {
+          "id": "pigmentation_profiling",
+          "name": "Customer-Centricity",
+          "description": "We are dedicated to providing unparalleled customer experiences, putting the needs of our users at the forefront of everything we do."
+        }
+      ],
+      "description_2": "Joining DriveEase means becoming part of a culture that values passion, creativity, and a commitment to redefining the future of travel. Together, we navigate uncharted roads and shape the next era of personalized travel experiences."
+    },
+    "teams": {
+      "headline": "Our Teams"
+    },
+
     "founders": [
       {
         "id": "0",
-        "name": "Dr Leng Yusong",
-        "role": "Co-Founder, CEO",
+        "name": "Cillian East",
+        "role": "Founder and CEO",
         "photo": "/images/teams/founder/yusong.png",
-        "description": "The founder and CEO of Alvisual Pte Ltd, Dr. Leng Yusong, holds a PhD in Artificial Intelligence and Computer Vision, conferred upon him by the National University of Singapore in 2020. Beyond his academic knowledge, Dr. Yusong is a practised entrepreneur as well, having successfully co-founded HiCura Medical Pte Ltd amidst his doctoral pursuits. Serving as the former CTO of HiCura Medical, Dr. Yusong was instrumental in the development of uSINE®, a pioneering AI software that stands as the world's premier solution capable of automatically identifying spinal anatomical landmarks from ultrasound scans in real time. At Alvisual, he continues to advance, riding the crest of innovation."
+        "description": "A visionary leader with over 20 years of experience in the travel industry, John founded DriveEase with the mission of transforming car rentals."
       },
       {
         "id": "0",
-        "name": "Dr Victor Kwan",
-        "role": "Co-Founder",
+        "name": "Edward Johnson",
+        "role": "Chief Technology Officer",
         "photo": "/images/teams/founder/victor.png",
-        "description": "Dr Victor Kwan has been in the automotive industry for over 20 years, with his latest position as Regional Managing Director of luxury brands such as Bentley, Aston Martin and Bugatti. Throughout his career, he has navigated diverse complexities to build up several brands that cut across all market segments – from mass to premium to luxury – while achieving record performances and garnering regional awards. Currently, he is excited to take on fresh challenges and opportunities brought about by technological advancements. The ambition to integrate practice experience with robust academic research led Victor to complete a PhD in Business with Singapore Management University. His research interests lie in word-of-mouth marketing on social media and luxury brand management."
-      }
-    ],
-    "employees": [
+        "description": "With a background in cutting-edge technologies, Edward leads DriveEase's technological innovations, ensuring a seamless and advanced platform for our users."
+      },
       {
         "id": "0",
-        "name": "Liu Xiaoxing",
-        "role": "Backend Developer",
-        "photo": "/images/teams/employee/liu_xiaoxing.png",
-        "description": ""
+        "name": "Matthias Herald",
+        "role": "Customer Experience Manager",
+        "photo": "/images/teams/founder/victor.png",
+        "description": "Matthias brings a wealth of experience in customer service, ensuring that every interaction with DriveEase exceeds expectations."
       },
       {
-        "id": "1",
-        "name": "Liu Zhaoyang",
-        "role": "AI Developer",
-        "photo": "/images/teams/employee/liu_zhaoyang_5.jpeg",
-        "description": ""
-      },
-      {
-        "id": "2",
-        "name": "Ilyas Bashirah",
-        "role": "Frontend Developer",
-        "photo": "/images/teams/employee/ilyas_bashirah.png",
-        "description": ""
+        "id": "0",
+        "name": "Michael Chen",
+        "role": "Head of Operations",
+        "photo": "/images/teams/founder/victor.png",
+        "description": "Michael oversees the operational excellence of DriveEase, leveraging years of experience to optimize processes and enhance the overall customer journey."
       }
     ]
   }
