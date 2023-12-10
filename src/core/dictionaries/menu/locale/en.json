@@ -5,26 +5,26 @@
       {
         "id": "home",
         "name": "Home",
-        "link": "#hero",
-        "type": "anchor"
+        "link": "/",
+        "type": "link"
       },
       {
         "id": "about_us",
         "name": "About Us",
-        "link": "#about-us",
-        "type": "anchor"
+        "link": "/about-us",
+        "type": "link"
       },
       {
         "id": "products",
         "name": "Products",
-        "link": "#products",
-        "type": "anchor"
+        "link": "/products",
+        "type": "link"
       },
       {
         "id": "teams",
         "name": "Teams",
-        "link": "#teams",
-        "type": "anchor"
+        "link": "/teams",
+        "type": "link"
       }
     ]
   }
