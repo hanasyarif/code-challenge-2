@@ -5,6 +5,7 @@ import Section from "@/core/ui/components/section/Section.component";
 import Breadcrumb from "@/core/ui/components/breadcrumb/Breadcrumb.component";
 import { useProductsDictionaries } from "../../zustand/dictionaries/store";
 import PersonnelCardProducts from "../../components/personnel_card/PersonnelCard.products";
+import TestimonialCardProducts from "@/features/products/components/testimonial_card/TestimonialCard.products";
 
 export default function ContentProducts() {
   const dict = useProductsDictionaries.getState().dict;
@@ -21,87 +22,6 @@ export default function ContentProducts() {
           >
             <Breadcrumb list={dict.breadcrumb} />
 
-            {/* history */}
-            <div
-              className={clsx(
-                "grid grid-cols-1 place-content-start place-items-start gap-y-[1.25rem]",
-                "w-full"
-              )}
-            >
-              <h2
-                className={clsx(
-                  "text-[2.5rem] md:text-[3rem] leading-[3.375rem] md:leading-[4rem] text-eerie-black font-semibold"
-                )}
-              >
-                {dict.team.history.headline}
-              </h2>
-              <h3
-                className={clsx(
-                  "text-[1rem] md:text-[1.125rem] leading-[1.5rem] md:leading-[2rem] text-granite-gray font-light"
-                )}
-              >
-                {dict.team.history.description}
-              </h3>
-            </div>
-
-            {/* culture */}
-            <div
-              className={clsx(
-                "grid grid-cols-1 place-content-start place-items-start gap-y-[1.25rem]",
-                "w-full"
-              )}
-            >
-              <h2
-                className={clsx(
-                  "text-[2.5rem] md:text-[3rem] leading-[3.375rem] md:leading-[4rem] text-eerie-black font-semibold"
-                )}
-              >
-                {dict.team.culture.headline}
-              </h2>
-              <h3
-                className={clsx(
-                  "text-[1rem] md:text-[1.125rem] leading-[1.5rem] md:leading-[2rem] text-granite-gray font-light"
-                )}
-              >
-                {dict.team.culture.description}
-              </h3>
-
-              <ul className={clsx("list-disc", "pl-[3rem]")}>
-                {dict.team.culture.aspects.map((aspect, aspectIndex) => (
-                  <li
-                    key={aspectIndex}
-                    className={clsx(
-                      "text-[1.125rem] leading-[2rem] font-light text-granite-gray"
-                    )}
-                  >
-                    <span
-                      className={clsx(
-                        "text-[1.125rem] leading-[2rem] font-semibold text-primary"
-                      )}
-                    >
-                      {aspect.name}
-                    </span>
-                    {": "}
-                    <span
-                      className={clsx(
-                        "text-[1.125rem] leading-[2rem] font-light text-granite-gray"
-                      )}
-                    >
-                      {aspect.description}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              <h3
-                className={clsx(
-                  "text-[1rem] md:text-[1.125rem] leading-[1.5rem] md:leading-[2rem] text-granite-gray font-light"
-                )}
-              >
-                {dict.team.culture.description_2}
-              </h3>
-            </div>
-
             {/* teams */}
             <div
               className={clsx(
@@ -114,7 +34,7 @@ export default function ContentProducts() {
                   "text-[2.5rem] md:text-[3rem] leading-[3.375rem] md:leading-[4rem] text-eerie-black font-semibold"
                 )}
               >
-                {dict.team.teams.headline}
+                {dict.products.headline}
               </h2>
             </div>
 
@@ -126,19 +46,63 @@ export default function ContentProducts() {
             >
               <div
                 className={clsx(
-                  "grid grid-cols-1 lg:grid-cols-2 place-content-start place-items-start gap-y-[1.5rem] gap-x-[1.5rem]",
+                  "grid grid-cols-1 lg:grid-cols-3 place-content-start place-items-start gap-y-[1.5rem] gap-x-[1.5rem]",
                   "w-full"
                 )}
               >
-                {dict.team.founders.map((founder) => (
+                {dict.products.data.map((product) => (
                   <PersonnelCardProducts
-                    key={founder.id}
-                    name={founder.name}
-                    role={founder.role}
-                    photo={founder.photo}
-                    description={founder.description}
+                    key={product.id}
+                    name={product.name}
+                    role={product.role}
+                    photo={product.photo}
+                    description={product.description}
                     variant={
-                      founder.name.toLowerCase().includes("yusong")
+                      product.name.toLowerCase().includes("yusong")
+                        ? "narrow"
+                        : "wide"
+                    }
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* testimonial */}
+            <div
+              className={clsx(
+                "grid grid-cols-1 place-content-start place-items-start gap-y-[1.25rem]",
+                "w-full"
+              )}
+            >
+              <h2
+                className={clsx(
+                  "text-[2.5rem] md:text-[3rem] leading-[3.375rem] md:leading-[4rem] text-eerie-black font-semibold"
+                )}
+              >
+                {dict.testimonials.headline}
+              </h2>
+            </div>
+
+            <div
+              className={clsx(
+                "grid grid-cols-1 place-content-start place-items-start gap-y-[1.25rem]",
+                "w-full"
+              )}
+            >
+              <div
+                className={clsx(
+                  "grid grid-cols-1 lg:grid-cols-3 place-content-start place-items-start gap-y-[1.5rem] gap-x-[1.5rem]",
+                  "w-full"
+                )}
+              >
+                {dict.testimonials.data.map((testimony) => (
+                  <TestimonialCardProducts
+                    key={testimony.id}
+                    name={testimony.name}
+                    photo={testimony.photo}
+                    description={testimony.description}
+                    variant={
+                      testimony.name.toLowerCase().includes("yusong")
                         ? "narrow"
                         : "wide"
                     }

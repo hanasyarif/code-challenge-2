@@ -1,26 +1,20 @@
 "use client";
 import * as React from "react";
+import { useRouter } from "next/navigation";
 import clsx from "clsx";
 import Image from "next/image";
 import { useHomeDictionaries } from "../../zustand/dictionaries/store";
 import Section from "@/core/ui/components/section/Section.component";
 import ContentSection from "@/core/ui/components/content_section/ContentSection.component";
-import { useLocaleStore } from "@/core/zustand/locale/store";
-import useScrollToAnchor from "@/core/ui/hooks/useScrollToAnchor";
 
 export default function HeroHome() {
   const dict = useHomeDictionaries.getState().dict.hero;
-  const locale = useLocaleStore.getState().locale;
-  const motto = `${dict.motto.instant}. <span style="font-size:48px; font-weight:bold; background:linear-gradient(135deg, #2B939D 0%, #2D528A 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent">${dict.motto.intelligent}</span>. ${dict.motto.incredible}. `;
-  const scrollToAnchor = useScrollToAnchor(42);
+  const router = useRouter();
 
   const handleClickPrimaryCTA = (e) => {
-    scrollToAnchor(e.currentTarget.value);
+    router.push("/products");
   };
 
-  const handleClickSecondaryCTA = (e) => {
-    scrollToAnchor(e.currentTarget.value);
-  };
   return (
     <div id={"hero"} className={clsx("w-full", "py-[72px] sm:py-[5.5rem]")}>
       <Section>
@@ -39,7 +33,7 @@ export default function HeroHome() {
               // dangerouslySetInnerHTML={{ __html: motto }}
             >
               {dict.headline}
-              </h1>
+            </h1>
 
             <p
               className={clsx(
@@ -69,21 +63,6 @@ export default function HeroHome() {
                 onClick={handleClickPrimaryCTA}
               >
                 {dict.cta.primary.text}
-              </button>
-              <button
-                aria-label={dict.cta.secondary.text}
-                className={clsx(
-                  "grid grid-flow-col place-content-center place-items-center",
-                  "px-[1.25rem] py-[0.625rem]",
-                  "bg-white",
-                  "border border-primary",
-                  "rounded-[0.375rem]",
-                  "text-[1rem] leading-[2rem] text-primary font-semibold uppercase"
-                )}
-                value={dict.cta.secondary.link}
-                onClick={handleClickSecondaryCTA}
-              >
-                {dict.cta.secondary.text}
               </button>
             </div>
           </div>

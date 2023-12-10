@@ -5,77 +5,68 @@
   },
   "breadcrumb": [
     {
-      "id": "about-us",
-      "name": "About Us",
+      "id": "home",
+      "name": "Home",
       "link": "/",
       "disabled": false
     },
     {
-      "id": "Meet Our Team",
-      "name": "Meet Our Team",
-      "link": "",
+      "id": "products",
+      "name": "Products",
+      "link": "/products",
       "disabled": true
     }
   ],
-  "team": {
-    "history": {
-      "headline": "Company History",
-      "description": "DriveEase was founded in 2016 with a bold vision to revolutionize the car rental industry. From its inception, DriveEase has been a trailblazer, introducing a revolutionary approach to redefine the travel experience. Throughout its journey, DriveEase has continuously innovated and embraced a customer-centric mindset. Today, it stands as a symbol of excellence in the car rental sector, driven by a commitment to inclusivity, creativity, and exceptional service. The milestones in DriveEase's history mark a trajectory of growth, innovation, and a steadfast dedication to delivering outstanding travel solutions."
-    },
-    "culture": {
-      "headline": "Company Culture",
-      "description": "At DriveEase, our culture is the driving force behind our success, fostering a dynamic and inclusive environment that inspires innovation and collaboration. Rooted in our values, we believe in:",
-      "aspects": [
-        {
-          "id": "wrinkle_assesment",
-          "name": "Innovation",
-          "description": "We encourage fresh ideas and a forward-thinking mindset, pushing the boundaries of what's possible in the car rental industry."
-        },
-        {
-          "id": "acne_analysis",
-          "name": "Inclusivity",
-          "description": "Our diverse team brings together unique perspectives, creating a rich tapestry of experiences that contributes to our vibrant workplace."
-        },
-        {
-          "id": "pigmentation_profiling",
-          "name": "Customer-Centricity",
-          "description": "We are dedicated to providing unparalleled customer experiences, putting the needs of our users at the forefront of everything we do."
-        }
-      ],
-      "description_2": "Joining DriveEase means becoming part of a culture that values passion, creativity, and a commitment to redefining the future of travel. Together, we navigate uncharted roads and shape the next era of personalized travel experiences."
-    },
-    "teams": {
-      "headline": "Our Teams"
-    },
 
-    "founders": [
+  "products": {
+    "headline": "Our Products",
+    "data": [
       {
         "id": "0",
-        "name": "Cillian East",
+        "name": "SUVs",
         "role": "Founder and CEO",
         "photo": "/images/teams/founder/yusong.png",
-        "description": "A visionary leader with over 20 years of experience in the travel industry, John founded DriveEase with the mission of transforming car rentals."
+        "description": "Experience the epitome of comfort and versatility with our SUVs. Spacious interiors, cutting-edge safety features, and a smooth ride make these vehicles perfect for family trips or adventurous getaways. Pricing varies based on the model and duration, ensuring flexible options to suit your travel plans."
       },
       {
         "id": "0",
-        "name": "Edward Johnson",
+        "name": "Minivans",
         "role": "Chief Technology Officer",
         "photo": "/images/teams/founder/victor.png",
-        "description": "With a background in cutting-edge technologies, Edward leads DriveEase's technological innovations, ensuring a seamless and advanced platform for our users."
+        "description": "Tailored for group travel, our minivans offer ample space and convenience. Loaded with family-friendly features, these vehicles provide a seamless travel experience. Pricing is competitive, with discounts for extended rentals."
       },
       {
         "id": "0",
-        "name": "Matthias Herald",
+        "name": "Sport Cars",
         "role": "Customer Experience Manager",
         "photo": "/images/teams/founder/victor.png",
-        "description": "Matthias brings a wealth of experience in customer service, ensuring that every interaction with DriveEase exceeds expectations."
+        "description": "For those seeking excitement on the road, our sports cars deliver unparalleled performance and style. Pricing varies based on the model and rental duration, providing options for short bursts of adrenaline or longer adventures."
+      }
+    ]
+  },
+  "testimonials": {
+    "headline": "Testimonials",
+    "data": [
+      {
+        "id": "0",
+        "name": "Emma R",
+        "role": "Founder and CEO",
+        "photo": "/images/teams/founder/yusong.png",
+        "description": "Renting an SUV from DriveEase made our family road trip comfortable and enjoyable. The vehicle was in excellent condition, and the pricing was reasonable. We'll definitely choose DriveEase for our future journeys."
       },
       {
         "id": "0",
-        "name": "Michael Chen",
-        "role": "Head of Operations",
+        "name": "Jason M",
+        "role": "Chief Technology Officer",
         "photo": "/images/teams/founder/victor.png",
-        "description": "Michael oversees the operational excellence of DriveEase, leveraging years of experience to optimize processes and enhance the overall customer journey."
+        "description": "DriveEase's minivan was a game-changer for our group vacation. The pricing was transparent, and the vehicle exceeded our expectations. The whole process was smooth, making it a stress-free rental experience."
+      },
+      {
+        "id": "0",
+        "name": "Alex D",
+        "role": "Customer Experience Manager",
+        "photo": "/images/teams/founder/victor.png",
+        "description": "Renting a sports car from DriveEase was a dream come true. The pricing was reasonable, the car was in top condition, and the experience was thrilling. Can't wait for my next DriveEase adventure!"
       }
     ]
   }
