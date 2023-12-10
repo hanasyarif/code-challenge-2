@@ -79,7 +79,7 @@ export default function Navbar({
             )}
           >
             <Image
-              src={"/logo/navbar-logo.png"}
+              src={"/logo/navbar-logo-2.jpeg"}
               alt={"logo"}
               fill={true}
               sizes={"(max-width: 1536px) 100vw, 1536px"}

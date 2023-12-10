@@ -36,8 +36,10 @@ export default function HeroHome() {
               className={clsx(
                 "text-[2.5rem] leading-[3.375rem] md:text-[52px] md:leading-[60px] lg:text-[3rem] lg:leading-[4rem] font-bold text-eerie-black text-center"
               )}
-              dangerouslySetInnerHTML={{ __html: motto }}
-            />
+              // dangerouslySetInnerHTML={{ __html: motto }}
+            >
+              {dict.headline}
+              </h1>
 
             <p
               className={clsx(

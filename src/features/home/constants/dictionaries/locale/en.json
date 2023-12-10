@@ -1,11 +1,12 @@
 {
   "hero": {
+    "headline": "Drive with Ease: Your Journey, Your Way.",
     "motto": {
       "instant": "Instant",
       "intelligent": "Intelligent",
       "incredible": "Incredible"
     },
-    "description": "Embrace the future of healthcare with Alvisual.",
+    "description": "Advanced Car Rental with DriveEase for Your Convenience",
     "cta": {
       "primary": {
         "link": "#products",
@@ -19,8 +20,8 @@
   },
   "about_us": {
     "pre": "About us",
-    "headline": "Make every health decision intelligent",
-    "subline": "Our goal at Alvisual Pte Ltd is to unlock the unlimited potential of AI to transform the health industry and create tangible improvements in people’s lives. By harnessing advanced machine-learning algorithms and data-processing techniques, we craft scalable solutions that augment human capabilities, supercharge operational efficiency, and drive business growth. Through our innovation, traditional wellness services can be elevated to an unprecedented level of standardization. This means that every customer, irrespective of when and where they are, has access to expert-level care with unwavering quality.",
+    "headline": "Transforming Every Drive into a Smart Choice",
+    "subline": "DriveEase, a pioneer in car rentals, introduces a fresh perspective to enhance your travel experience. Since our establishment in 2016, we've been dedicated to transforming the car rental landscape with innovative solutions. Our culture embraces inclusivity and a commitment to putting you at the heart of every journey. Your exceptional experience is our top priority at DriveEase",
     "cta": {
       "primary": {
         "link": "/teams",
