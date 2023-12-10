@@ -1,8 +1,6 @@
 import * as React from "react";
 
-export interface ZoomOutIconProps extends React.HTMLAttributes<SVGElement> {}
-
-export default function ZoomOutIcon(props: ZoomOutIconProps) {
+export default function ZoomOutIcon(props) {
   return (
     <svg
       {...props}

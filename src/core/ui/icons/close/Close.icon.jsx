@@ -1,8 +1,6 @@
 import * as React from "react";
 
-export interface CloseIconProps extends React.HTMLAttributes<SVGElement> {}
-
-export default function CloseIcon(props: CloseIconProps) {
+export default function CloseIcon(props) {
   return (
     <svg
       {...props}

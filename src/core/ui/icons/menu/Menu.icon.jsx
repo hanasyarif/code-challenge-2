@@ -1,8 +1,6 @@
 import * as React from "react";
 
-export interface MenuIconProps extends React.HTMLAttributes<SVGElement> {}
-
-export default function MenuIcon(props: MenuIconProps) {
+export default function MenuIcon(props) {
   return (
     <svg
       {...props}

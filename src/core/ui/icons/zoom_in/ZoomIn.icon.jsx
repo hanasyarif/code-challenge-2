@@ -1,8 +1,6 @@
 import * as React from "react";
 
-export interface ZoomInIconProps extends React.HTMLAttributes<SVGElement> {}
-
-export default function ZoomInIcon(props: ZoomInIconProps) {
+export default function ZoomInIcon(props) {
   return (
     <svg
       {...props}

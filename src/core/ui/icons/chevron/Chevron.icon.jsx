@@ -1,8 +1,6 @@
 import * as React from "react";
 
-export interface ChevronIconProps extends React.HTMLAttributes<SVGElement> {}
-
-export default function ChevronIcon(props: ChevronIconProps) {
+export default function ChevronIcon(props) {
   return (
     <svg
       {...props}
