@@ -6,6 +6,7 @@ import Breadcrumb from "@/core/ui/components/breadcrumb/Breadcrumb.component";
 import { useProductsDictionaries } from "../../zustand/dictionaries/store";
 import PersonnelCardProducts from "../../components/personnel_card/PersonnelCard.products";
 import TestimonialCardProducts from "@/features/products/components/testimonial_card/TestimonialCard.products";
+import { faker } from "@faker-js/faker";
 
 export default function ContentProducts() {
   const dict = useProductsDictionaries.getState().dict;
@@ -55,7 +56,7 @@ export default function ContentProducts() {
                     key={product.id}
                     name={product.name}
                     role={product.role}
-                    photo={product.photo}
+                    photo={faker.image.avatar({ width: 480, height: 480 })}
                     description={product.description}
                     variant={
                       product.name.toLowerCase().includes("yusong")
@@ -99,7 +100,7 @@ export default function ContentProducts() {
                   <TestimonialCardProducts
                     key={testimony.id}
                     name={testimony.name}
-                    photo={testimony.photo}
+                    photo={faker.image.avatar({ width: 480, height: 480 })}
                     description={testimony.description}
                     variant={
                       testimony.name.toLowerCase().includes("yusong")
