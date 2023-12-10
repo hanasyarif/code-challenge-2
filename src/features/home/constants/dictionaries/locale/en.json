@@ -86,6 +86,29 @@
       }
     ]
   },
+  "testimonials": {
+    "pre": "Testimonial",
+    "values": [
+      {
+        "id": "Emma R",
+        "image": "/images/home/aspect/ubiquitous_access.image.png",
+        "name": "Emma R",
+        "description": "Renting an SUV from DriveEase made our family road trip comfortable and enjoyable. The vehicle was in excellent condition, and the pricing was reasonable. We'll definitely choose DriveEase for our future journeys."
+      },
+      {
+        "id": "Jason M",
+        "image": "/images/home/aspect/understandable_ai.image.png",
+        "name": "Jason M",
+        "description": "DriveEase's minivan was a game-changer for our group vacation. The pricing was transparent, and the vehicle exceeded our expectations. The whole process was smooth, making it a stress-free rental experience."
+      },
+      {
+        "id": "Alex D",
+        "image": "/images/home/aspect/human_centered_design.image.png",
+        "name": "Alex D",
+        "description": "Renting a sports car from DriveEase was a dream come true. The pricing was reasonable, the car was in top condition, and the experience was thrilling. Can't wait for my next DriveEase adventure!"
+      }
+    ]
+  },
   "partner": {
     "pre": "Our Partners",
     "headline": "Visit our valued partners",
