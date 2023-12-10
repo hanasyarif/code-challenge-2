@@ -59,6 +59,6 @@
     "src/features/teams/fragments/content/Content.teams.jsx",
     "src/features/teams/zustand/dictionaries/store.jsx",
     "src/features/teams/zustand/dictionaries/initializer.jsx"
-, "src/features/teams/components/personnel_card/index.jsx", "src/features/teams/components/personnel_card/PersonnelCard.teams.jsx", "src/features/teams/constants/dictionaries/index.js", "src/features/teams/constants/dictionaries/dictionaries.js"  ],
+, "src/features/teams/components/personnel_card/index.jsx", "src/features/teams/components/personnel_card/PersonnelCard.teams.jsx", "src/features/teams/constants/dictionaries/index.js", "src/features/teams/constants/dictionaries/dictionaries.js", "src/app/sitemap.xml/route.jsx"  ],
   "exclude": ["node_modules"]
 }
