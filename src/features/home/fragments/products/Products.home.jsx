@@ -82,7 +82,7 @@ export default function ProductsHome() {
             </div>
 
             {/* products */}
-            <div
+            {/* <div
               className={clsx(
                 "grid grid-cols-1 place-content-start place-items-start",
                 "w-full"
@@ -102,7 +102,7 @@ export default function ProductsHome() {
                   onClick={handleClickProduct}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
         </ContentSection>
       </Section>
