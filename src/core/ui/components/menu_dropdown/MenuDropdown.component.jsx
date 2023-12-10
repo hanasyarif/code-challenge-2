@@ -4,7 +4,6 @@ import clsx from "clsx";
 
 import CloseIcon from "../../icons/close/Close.icon";
 import MenuIcon from "../../icons/menu/Menu.icon";
-import useScrollToAnchor from "../../hooks/useScrollToAnchor";
 import { usePathname } from "next/navigation";
 
 const REGEX_TARGET_ID = /.*\#/;
@@ -15,18 +14,7 @@ export default function MenuDropdown({
   list = [],
   onClick,
 }) {
-  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [targetID, setTargetID] = useState("");
-
-  const scrollToAnchor = useScrollToAnchor(42);
-
-  useEffect(() => {
-    if (!!activeTargetID.length) {
-      setTargetID((_) => activeTargetID);
-      scrollToAnchor(activeTargetID);
-    }
-  }, [activeTargetID]);
 
   const handleClick = (e) => {
     if (e.currentTarget.value.includes("/")) {
@@ -35,17 +23,7 @@ export default function MenuDropdown({
       }
       return;
     }
-    const href = e.currentTarget.value;
-    const id = href.replace(REGEX_TARGET_ID, "");
-    setTargetID((prev) => id);
     setIsOpen((prev) => !prev);
-    if (pathname === defaultLink) {
-      scrollToAnchor(e.currentTarget.value);
-    } else {
-      if (onClick) {
-        onClick(e.currentTarget.value);
-      }
-    }
   };
 
   const handleClickHamburgerMenu = () => {
@@ -91,7 +69,7 @@ export default function MenuDropdown({
             key={listIndex}
             className={clsx(
               "py-[0.625rem] px-[1.125rem]",
-              listItem.link.replace(REGEX_TARGET_ID, "") === targetID
+              activeTargetID.includes(listItem.id)
                 ? "bg-davys-grey text-white"
                 : "bg-white text-eerie-black hover:bg-davys-grey hover:text-white",
               "text-[1rem] font-medium uppercase leading-[2rem]",

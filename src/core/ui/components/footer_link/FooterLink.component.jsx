@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
-import useScrollToAnchor from "../../hooks/useScrollToAnchor";
 import { usePathname } from "next/navigation";
 
 const REGEX_TARGET_ID = /.*\#/;
@@ -14,19 +13,8 @@ export default function FooterLink({
   onClick,
 }) {
   const pathname = usePathname();
-  const [targetID, setTargetID] = useState("#hero");
-
-  const scrollToAnchor = useScrollToAnchor(42);
-  useEffect(() => {
-    if (!!activeTargetID.length) {
-      setTargetID((_) => activeTargetID);
-      scrollToAnchor(activeTargetID);
-    }
-  }, [activeTargetID]);
 
   const handleClick = (e) => {
-    const href = e.currentTarget.value;
-    setTargetID((prev) => href);
     if (pathname === defaultLink) {
       scrollToAnchor(e.currentTarget.value);
     } else {
@@ -65,7 +53,9 @@ export default function FooterLink({
               "w-full",
               "px-[0.75rem] py-[0.5rem] md:py-[0.75rem] md:px-[0.75rem]",
               "text-[0.875rem] font-light uppercase",
-              listItem.link.replace(REGEX_TARGET_ID, "") === targetID
+              activeTargetID === "/" && listItem.id === "home"
+                ? "text-primary"
+                : activeTargetID !== "/" && activeTargetID.includes(listItem.id)
                 ? "text-primary"
                 : "text-chinese-white hover:text-primary",
               "cursor-pointer"

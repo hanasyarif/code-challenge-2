@@ -8,7 +8,7 @@ import { getCompanyDictionaries } from "@/core/dictionaries/company";
 import { getContactDictionaries } from "@/core/dictionaries/contact";
 import { getMenuDictionaries } from "@/core/dictionaries/menu";
 import { useNavigationStore } from "@/core/zustand/navigation/store";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function PublicLayout({ children }) {
   const locale = useLocaleStore().locale;
@@ -17,6 +17,7 @@ export default function PublicLayout({ children }) {
   const contact = getContactDictionaries(locale).alvisual;
   const navigationStore = useNavigationStore();
   const router = useRouter();
+  const pathname = usePathname();
 
   const defaultLink = "/";
 
@@ -48,7 +49,7 @@ export default function PublicLayout({ children }) {
     <main className={clsx("w-full")}>
       <Navbar
         defaultLink={defaultLink}
-        activeTargetID={navigationStore.id}
+        activeTargetID={pathname}
         list={menu.list}
         onClick={handleClickNavbar}
       />

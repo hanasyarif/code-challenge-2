@@ -4,10 +4,6 @@ import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import MenuDropdown from "../menu_dropdown/MenuDropdown.component";
-import useScrollToAnchor from "../../hooks/useScrollToAnchor";
-import { usePathname } from "next/navigation";
-
-const REGEX_TARGET_ID = /.*\#/;
 
 export default function Navbar({
   activeTargetID = "",
@@ -16,32 +12,12 @@ export default function Navbar({
 
   onClick,
 }) {
-  const pathname = usePathname();
-  const [targetID, setTargetID] = useState("#hero");
-
-  const scrollToAnchor = useScrollToAnchor(42);
-  useEffect(() => {
-    if (!!activeTargetID.length) {
-      setTargetID((_) => activeTargetID);
-      scrollToAnchor(activeTargetID);
-    }
-  }, [activeTargetID]);
-
   const handleClick = (e) => {
     if (e.currentTarget.value.includes("/")) {
       if (onClick) {
         onClick(e.currentTarget.value);
       }
       return;
-    }
-    const href = e.currentTarget.value;
-    setTargetID((prev) => href);
-    if (pathname === defaultLink) {
-      scrollToAnchor(e.currentTarget.value);
-    } else {
-      if (onClick) {
-        onClick(e.currentTarget.value);
-      }
     }
   };
 
@@ -100,10 +76,16 @@ export default function Navbar({
               key={listIndex}
               className={clsx(
                 "py-[0.625rem] px-[1.125rem]",
-                listItem.link.replace(REGEX_TARGET_ID, "") === targetID
+                activeTargetID === "/" && listItem.id === "home"
+                  ? "border-b-[2px] border-b-primary"
+                  : activeTargetID !== "/" &&
+                    activeTargetID.includes(listItem.id)
                   ? "border-b-[2px] border-b-primary"
                   : "border-b-[2px] border-b-white hover:border-b-primary",
-                listItem.link.replace(REGEX_TARGET_ID, "") === targetID
+                activeTargetID === "/" && listItem.id === "home"
+                  ? "text-primary"
+                  : activeTargetID !== "/" &&
+                    activeTargetID.includes(listItem.id)
                   ? "text-primary"
                   : "text-eerie-black hover:text-primary",
 
