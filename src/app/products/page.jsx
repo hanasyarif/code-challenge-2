@@ -1,9 +1,9 @@
 import PublicLayout from "@/core/ui/layout/public/Public.layout";
 import { useLocaleStore } from "@/core/zustand/locale/store";
-import { getTeamsFeatureDictionaries } from "@/features/teams/constants/dictionaries";
-import BannerTeams from "@/features/teams/fragments/banner/Banner.teams";
-import ContentTeams from "@/features/teams/fragments/content/Content.teams";
-import { useTeamsDictionaries } from "@/features/teams/zustand/dictionaries/store";
+import { getProductsFeatureDictionaries } from "@/features/products/constants/dictionaries";
+import BannerProducts from "@/features/products/fragments/banner/Banner.products";
+import ContentProducts from "@/features/products/fragments/content/Content.products";
+import { useProductsDictionaries } from "@/features/products/zustand/dictionaries/store";
 import MetadataData from "@/core/utils/metadata/metadata.json";
 
 export const metadata = {
@@ -13,12 +13,12 @@ export const metadata = {
 
 export default async function ProductsPage() {
   useLocaleStore.setState({ locale: "en" });
-  const dict = getTeamsFeatureDictionaries("en");
-  useTeamsDictionaries.setState({ dict: dict });
+  const dict = getProductsFeatureDictionaries("en");
+  useProductsDictionaries.setState({ dict: dict });
   return (
     <PublicLayout>
-      <BannerTeams />
-      <ContentTeams />
+      <BannerProducts />
+      <ContentProducts />
     </PublicLayout>
   );
 }

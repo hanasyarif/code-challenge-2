@@ -3,11 +3,11 @@ import clsx from "clsx";
 import ContentSection from "@/core/ui/components/content_section/ContentSection.component";
 import Section from "@/core/ui/components/section/Section.component";
 import Breadcrumb from "@/core/ui/components/breadcrumb/Breadcrumb.component";
-import { useProductsDictionaries } from "../../zustand/dictionaries/store";
-import PersonnelCardProducts from "../../components/personnel_card/PersonnelCard.products";
+import { useAboutUsDictionaries } from "../../zustand/dictionaries/store";
+import PersonnelCardTeams from "../../components/personnel_card/PersonnelCard.about_us";
 
-export default function ContentProducts() {
-  const dict = useProductsDictionaries.getState().dict;
+export default function ContentAboutUs() {
+  const dict = useAboutUsDictionaries.getState().dict;
   return (
     <div id={"meet-our-teams"} className={clsx("w-full")}>
       <Section>
@@ -131,7 +131,7 @@ export default function ContentProducts() {
                 )}
               >
                 {dict.team.founders.map((founder) => (
-                  <PersonnelCardProducts
+                  <PersonnelCardTeams
                     key={founder.id}
                     name={founder.name}
                     role={founder.role}
