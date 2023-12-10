@@ -6,12 +6,6 @@ import CloseIcon from "../../icons/close/Close.icon";
 import MenuIcon from "../../icons/menu/Menu.icon";
 import useScrollToAnchor from "../../hooks/useScrollToAnchor";
 import { usePathname } from "next/navigation";
-export interface MenuDropdownProps {
-  activeTargetID?: string;
-  defaultLink?: string;
-  list?: { id: string; name: string; link: string; type: string }[];
-  onClick?: (value: string) => void;
-}
 
 const REGEX_TARGET_ID = /.*\#/;
 
@@ -20,10 +14,10 @@ export default function MenuDropdown({
   defaultLink = "/",
   list = [],
   onClick,
-}: MenuDropdownProps) {
+}) {
   const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [targetID, setTargetID] = useState<string>("");
+  const [isOpen, setIsOpen] = useState(false);
+  const [targetID, setTargetID] = useState("");
 
   const scrollToAnchor = useScrollToAnchor(42);
 
@@ -34,7 +28,7 @@ export default function MenuDropdown({
     }
   }, [activeTargetID]);
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (e) => {
     if (e.currentTarget.value.includes("/")) {
       if (onClick) {
         onClick(e.currentTarget.value);

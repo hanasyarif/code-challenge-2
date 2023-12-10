@@ -7,13 +7,6 @@ import MenuDropdown from "../menu_dropdown/MenuDropdown.component";
 import useScrollToAnchor from "../../hooks/useScrollToAnchor";
 import { usePathname } from "next/navigation";
 
-export interface NavbarProps {
-  activeTargetID?: string;
-  defaultLink?: string;
-  list?: { id: string; name: string; link: string; type: string }[];
-  onClick?: (value: string) => void;
-}
-
 const REGEX_TARGET_ID = /.*\#/;
 
 export default function Navbar({
@@ -22,9 +15,9 @@ export default function Navbar({
   list = [],
 
   onClick,
-}: NavbarProps) {
+}) {
   const pathname = usePathname();
-  const [targetID, setTargetID] = useState<string>("#hero");
+  const [targetID, setTargetID] = useState("#hero");
 
   const scrollToAnchor = useScrollToAnchor(42);
   useEffect(() => {
@@ -34,7 +27,7 @@ export default function Navbar({
     }
   }, [activeTargetID]);
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (e) => {
     if (e.currentTarget.value.includes("/")) {
       if (onClick) {
         onClick(e.currentTarget.value);

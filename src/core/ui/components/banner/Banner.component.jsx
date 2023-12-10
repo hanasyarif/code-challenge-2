@@ -2,12 +2,7 @@ import * as React from "react";
 import clsx from "clsx";
 import Image from "next/image";
 
-export interface BannerProps {
-  image?: string;
-  alt?: string;
-}
-
-export default function Banner({ image = "", alt = "" }: BannerProps) {
+export default function Banner({ image = "", alt = "" }) {
   return (
     <div className={clsx("w-full h-[166px] md:h-[40rem]", "relative")}>
       <Image

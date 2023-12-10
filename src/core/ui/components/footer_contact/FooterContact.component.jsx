@@ -2,19 +2,7 @@ import * as React from "react";
 import clsx from "clsx";
 import Image from "next/image";
 
-export interface FooterContactProps {
-  title?: string;
-  list?: {
-    id: string;
-    icon: string;
-    label: string;
-  }[];
-}
-
-export default function FooterContact({
-  title = "",
-  list = [],
-}: FooterContactProps) {
+export default function FooterContact({ title = "", list = [] }) {
   return (
     <div
       className={clsx(

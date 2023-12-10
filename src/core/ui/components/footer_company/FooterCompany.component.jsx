@@ -2,17 +2,11 @@ import * as React from "react";
 import clsx from "clsx";
 import Image from "next/image";
 
-export interface FooterCompanyProps {
-  image?: string;
-  imageAlt?: string;
-  description?: string;
-}
-
 export default function FooterCompany({
   image = "",
   imageAlt = "",
   description = "",
-}: FooterCompanyProps) {
+}) {
   return (
     <div
       className={clsx(
@@ -29,7 +23,11 @@ export default function FooterCompany({
         />
       </div>
 
-      <p className={clsx("text-[1rem] leading-[1.5rem] text-chinese-white font-light text-left")}>
+      <p
+        className={clsx(
+          "text-[1rem] leading-[1.5rem] text-chinese-white font-light text-left"
+        )}
+      >
         {description}
       </p>
     </div>

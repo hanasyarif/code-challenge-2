@@ -12,13 +12,6 @@ import FooterContact, {
 import ContentSection from "../content_section/ContentSection.component";
 import FooterCredits from "../footer_credits/FooterCredits.component";
 
-export interface FooterProps {
-  company?: FooterCompanyProps;
-  link?: FooterLinkProps;
-  contact?: FooterContactProps;
-  credits?: string;
-}
-
 export default function Footer({
   company = {
     image: "",
@@ -36,7 +29,7 @@ export default function Footer({
     list: [],
   },
   credits = "",
-}: FooterProps) {
+}) {
   return (
     <footer
       className={clsx(

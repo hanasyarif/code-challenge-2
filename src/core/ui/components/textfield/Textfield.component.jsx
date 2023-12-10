@@ -1,15 +1,11 @@
 import * as React from "react";
 import clsx from "clsx";
 
-export interface TextAreaProps extends React.HTMLProps<HTMLTextAreaElement> {
-  label?: string;
-}
-
-export default function TextArea({
+export default function Textfield({
   label = "",
   required = false,
   ...inputProps
-}: TextAreaProps) {
+}) {
   return (
     <div
       className={clsx(
@@ -19,12 +15,14 @@ export default function TextArea({
     >
       <div
         className={clsx(
-          "grid grid-flow-col place-content-start place-items-start gap-x-[0.25rem]"
+          "grid grid-flow-col place-content-start place-items-start",
+          "w-full"
         )}
       >
         <p
           className={clsx(
-            "text-[1rem] leading-[2rem] font-normal text-charleston-green whitespace-nowrap"
+            "text-[1rem] leading-[2rem] font-normal text-charleston-green",
+            "whitespace-nowrap"
           )}
         >
           {label}
@@ -50,11 +48,11 @@ export default function TextArea({
           "bg-ghost-white"
         )}
       >
-        <textarea
+        <input
           className={clsx(
             "w-full",
             "placeholder:text-[1rem] placeholder:font-light placeholder:text-granite-gray",
-            "text-[1rem] font-normal text-eerie-black",
+            "text-[1rem] font-light text-eerie-black",
             "bg-transparent",
             "outline-none"
           )}

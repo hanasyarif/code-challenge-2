@@ -1,12 +1,8 @@
-import { Table, flexRender } from "@tanstack/react-table";
+import { flexRender } from "@tanstack/react-table";
 import * as React from "react";
 import clsx from "clsx";
 
-export interface TableHeadProps {
-  table?: Table<any> | null;
-}
-
-export const TableHead = ({ table = null }: TableHeadProps) => {
+export const TableHead = ({ table = null }) => {
   return (
     <thead>
       {table !== null &&

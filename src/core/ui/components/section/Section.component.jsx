@@ -1,11 +1,7 @@
 import clsx from "clsx";
 import * as React from "react";
 
-export interface SectionProps {
-  children?: React.ReactNode;
-}
-
-export default function Section({ children }: SectionProps) {
+export default function Section({ children }) {
   return (
     <section
       className={clsx(

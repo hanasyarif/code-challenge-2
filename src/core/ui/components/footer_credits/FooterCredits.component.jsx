@@ -1,11 +1,7 @@
 import * as React from "react";
 import clsx from "clsx";
 
-export interface IFooterCreditsProps {
-  credits?: string;
-}
-
-export default function FooterCredits({ credits }: IFooterCreditsProps) {
+export default function FooterCredits({ credits }) {
   return (
     <div
       className={clsx(

@@ -10,11 +10,7 @@ import { getMenuDictionaries } from "@/core/dictionaries/menu";
 import { useNavigationStore } from "@/core/zustand/navigation/store";
 import { useRouter } from "next/navigation";
 
-export interface PublicLayoutProps {
-  children?: React.ReactNode;
-}
-
-export default function PublicLayout({ children }: PublicLayoutProps) {
+export default function PublicLayout({ children }) {
   const locale = useLocaleStore().locale;
   const menu = getMenuDictionaries(locale).alvisual;
   const company = getCompanyDictionaries(locale).alvisual;
@@ -24,17 +20,17 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
 
   const defaultLink = "/";
 
-  const handleClickNavbar = (value: string) => {
+  const handleClickNavbar = (value) => {
     if (value.includes("/")) {
       router.push(value);
       return;
     }
-    navigationStore.setIDNavigation(value as any);
+    navigationStore.setIDNavigation(value);
     localStorage.setItem("navigation_id", value);
     router.push(defaultLink);
   };
-  const handleClickFooter = (value: string) => {
-    navigationStore.setIDNavigation(value as any);
+  const handleClickFooter = (value) => {
+    navigationStore.setIDNavigation(value);
     localStorage.setItem("navigation_id", value);
     router.push(defaultLink);
   };
@@ -43,7 +39,7 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
     if (typeof window !== undefined) {
       const navigationID = localStorage.getItem("navigation_id");
       if (navigationID !== null) {
-        navigationStore.setIDNavigation(navigationID as any);
+        navigationStore.setIDNavigation(navigationID);
       }
     }
   }, []);

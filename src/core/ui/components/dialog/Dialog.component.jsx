@@ -3,17 +3,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import clsx from "clsx";
 
-export interface DialogComponentProps {
-  isOpen?: boolean;
-  children?: React.ReactNode;
-  onClose?: () => void;
-}
-
-export default function DialogComponent({
-  isOpen = false,
-  children,
-  onClose,
-}: DialogComponentProps) {
+export default function DialogComponent({ isOpen = false, children, onClose }) {
   const handleClose = () => {
     if (onClose) {
       onClose();

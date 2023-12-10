@@ -6,26 +6,15 @@ import { usePathname } from "next/navigation";
 
 const REGEX_TARGET_ID = /.*\#/;
 
-export interface FooterLinkProps {
-  title?: string;
-  list?: {
-    name: string;
-    link: string;
-  }[];
-  activeTargetID?: string;
-  defaultLink?: string;
-  onClick?: (value: string) => void;
-}
-
 export default function FooterLink({
   title = "",
   list = [],
   activeTargetID = "",
   defaultLink = "/",
   onClick,
-}: FooterLinkProps) {
+}) {
   const pathname = usePathname();
-  const [targetID, setTargetID] = useState<string>("#hero");
+  const [targetID, setTargetID] = useState("#hero");
 
   const scrollToAnchor = useScrollToAnchor(42);
   useEffect(() => {
@@ -35,7 +24,7 @@ export default function FooterLink({
     }
   }, [activeTargetID]);
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (e) => {
     const href = e.currentTarget.value;
     setTargetID((prev) => href);
     if (pathname === defaultLink) {

@@ -3,21 +3,8 @@ import * as React from "react";
 import clsx from "clsx";
 import Link from "next/link";
 
-export interface BreadcrumbProps {
-  list?: {
-    id: string;
-    name: string;
-    link: string;
-    disabled: boolean;
-  }[];
-  separator?: string;
-}
-
-export default function Breadcrumb({
-  list = [],
-  separator = "/",
-}: BreadcrumbProps) {
-  const handleClick = (value: string) => {
+export default function Breadcrumb({ list = [], separator = "/" }) {
+  const handleClick = (value) => {
     const href = `#${value}`;
     localStorage.setItem("navigation_id", href);
   };

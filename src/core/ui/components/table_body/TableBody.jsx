@@ -1,14 +1,8 @@
-import { Table, flexRender } from "@tanstack/react-table";
+import { flexRender } from "@tanstack/react-table";
 import * as React from "react";
 import clsx from "clsx";
 
-export interface TableBodyProps {
-  table?: Table<any> | null;
-}
-
-export const TableBody: React.FC<TableBodyProps> = ({
-  table = null,
-}: TableBodyProps) => {
+export const TableBody = ({ table = null }) => {
   return (
     <tbody className={clsx("bg-[#649E84]")}>
       {table !== null &&

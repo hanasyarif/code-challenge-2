@@ -1,4 +1,3 @@
-import { Locale } from "@/core/utils/i18";
 import { create } from "zustand";
 
 export interface NavigationStore {

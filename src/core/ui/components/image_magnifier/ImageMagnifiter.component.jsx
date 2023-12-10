@@ -7,11 +7,9 @@ import CloseIcon from "../../icons/close/Close.icon";
 import ZoomInIcon from "../../icons/zoom_in/ZoomIn.icon";
 import ZoomOutIcon from "../../icons/zoom_out/ZoomOut.icon";
 
-export interface ImageMagnifierProps extends ImageProps {}
-
-export default function ImageMagnifier(props: ImageMagnifierProps) {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [isZoomIn, setZoomIn] = useState<boolean>(false);
+export default function ImageMagnifier(props) {
+  const [isOpen, setIsOpen] = useState < boolean > false;
+  const [isZoomIn, setZoomIn] = useState < boolean > false;
   const handleClick = () => {
     setIsOpen((prev) => !prev);
   };

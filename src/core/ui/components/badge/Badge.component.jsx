@@ -2,14 +2,7 @@ import * as React from "react";
 import clsx from "clsx";
 import Image from "next/image";
 
-export type BadgeVariant = "info";
-
-export interface BadgeProps {
-  variant?: BadgeVariant;
-  text?: string;
-}
-
-export default function Badge({ variant = "info", text = "" }: BadgeProps) {
+export default function Badge({ variant = "info", text = "" }) {
   const imageSrc =
     variant === "info"
       ? "/icons/badge/info.icon.png"

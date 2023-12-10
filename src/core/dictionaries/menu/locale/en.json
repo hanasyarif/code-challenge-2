@@ -19,6 +19,12 @@
         "name": "Products",
         "link": "#products",
         "type": "anchor"
+      },
+      {
+        "id": "teams",
+        "name": "Teams",
+        "link": "#teams",
+        "type": "anchor"
       }
     ]
   }
