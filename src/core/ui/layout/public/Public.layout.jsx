@@ -58,7 +58,7 @@ export default function PublicLayout({ children }) {
         company={company}
         link={{
           ...menu,
-          activeTargetID: navigationStore.id,
+          activeTargetID: pathname,
           defaultLink: defaultLink,
           onClick: handleClickFooter,
         }}

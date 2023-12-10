@@ -1,9 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
 import clsx from "clsx";
-import { usePathname } from "next/navigation";
-
-const REGEX_TARGET_ID = /.*\#/;
 
 export default function FooterLink({
   title = "",
@@ -12,15 +8,9 @@ export default function FooterLink({
   defaultLink = "/",
   onClick,
 }) {
-  const pathname = usePathname();
-
   const handleClick = (e) => {
-    if (pathname === defaultLink) {
-      scrollToAnchor(e.currentTarget.value);
-    } else {
-      if (onClick) {
-        onClick(e.currentTarget.value);
-      }
+    if (onClick) {
+      onClick(e.currentTarget.value);
     }
   };
 

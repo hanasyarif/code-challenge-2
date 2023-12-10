@@ -46,18 +46,17 @@ export default function TestimonialCardProducts({
       >
         <p
           className={clsx(
-            "text-[1.125rem] leading-[2rem] font-thin text-granite-gray text-center"
-          )}
-        >
-          {description}
-        </p>
-
-        <p
-          className={clsx(
             "text-[1.25rem] leading-[2rem] font-semibold text-eerie-black text-center"
           )}
         >
           {name}
+        </p>
+        <p
+          className={clsx(
+            "text-[1.125rem] leading-[2rem] font-thin text-granite-gray text-center"
+          )}
+        >
+          {description}
         </p>
       </div>
     </div>
