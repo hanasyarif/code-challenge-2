@@ -3,9 +3,7 @@ import clsx from "clsx";
 import { useTeamsDictionaries } from "../../zustand/dictionaries/store";
 import Banner from "@/core/ui/components/banner/Banner.component";
 
-export interface BannerTeamsProps {}
-
-export default function BannerTeams(props: BannerTeamsProps) {
+export default function BannerTeams(props) {
   const dict = useTeamsDictionaries.getState().dict.banner;
   return (
     <div

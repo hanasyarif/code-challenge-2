@@ -51,7 +51,14 @@
     "src/features/home/zustand/dictionaries/store.jsx",
     "src/features/home/zustand/dictionaries/initializer.jsx",
     "src/features/home/constants/react_hook_form/key.js",
-    "src/features/home/constants/react_hook_form/index.js"
-  ],
+    "src/features/home/constants/react_hook_form/index.js",
+    "src/app/teams/page.jsx",
+    "src/features/teams/fragments/banner/index.jsx",
+    "src/features/teams/fragments/banner/Banner.teams.jsx",
+    "src/features/teams/fragments/content/index.jsx",
+    "src/features/teams/fragments/content/Content.teams.jsx",
+    "src/features/teams/zustand/dictionaries/store.jsx",
+    "src/features/teams/zustand/dictionaries/initializer.jsx"
+, "src/features/teams/components/personnel_card/index.jsx", "src/features/teams/components/personnel_card/PersonnelCard.teams.jsx", "src/features/teams/constants/dictionaries/index.js", "src/features/teams/constants/dictionaries/dictionaries.js"  ],
   "exclude": ["node_modules"]
 }

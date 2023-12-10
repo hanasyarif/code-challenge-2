@@ -6,9 +6,8 @@ import Breadcrumb from "@/core/ui/components/breadcrumb/Breadcrumb.component";
 import { useTeamsDictionaries } from "../../zustand/dictionaries/store";
 import PersonnelCardTeams from "../../components/personnel_card/PersonnelCard.teams";
 
-export interface ContentTeamsProps {}
 
-export default function ContentTeams(props: ContentTeamsProps) {
+export default function ContentTeams() {
   const dict = useTeamsDictionaries.getState().dict;
   return (
     <div id={"meet-our-teams"} className={clsx("w-full")}>

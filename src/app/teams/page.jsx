@@ -4,10 +4,9 @@ import { getTeamsFeatureDictionaries } from "@/features/teams/constants/dictiona
 import BannerTeams from "@/features/teams/fragments/banner/Banner.teams";
 import ContentTeams from "@/features/teams/fragments/content/Content.teams";
 import { useTeamsDictionaries } from "@/features/teams/zustand/dictionaries/store";
-import { Metadata } from "next";
 import MetadataData from "@/core/utils/metadata/metadata.json";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: MetadataData.teams.title,
   description: MetadataData.teams.description,
 };

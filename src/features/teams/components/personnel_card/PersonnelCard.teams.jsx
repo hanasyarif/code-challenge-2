@@ -2,21 +2,13 @@ import * as React from "react";
 import clsx from "clsx";
 import Image from "next/image";
 
-export interface PersonnelCardTeamsProps {
-  name?: string;
-  role?: string;
-  photo?: string;
-  description?: string;
-  variant?: "wide" | "narrow";
-}
-
 export default function PersonnelCardTeams({
   name = "",
   role = "",
   photo = "",
   description = "",
   variant = "narrow",
-}: PersonnelCardTeamsProps) {
+}) {
   return (
     <div
       className={clsx(
